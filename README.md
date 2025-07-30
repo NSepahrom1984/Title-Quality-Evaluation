@@ -1,11 +1,11 @@
 # Project: Evaluation of Language Models (T5 and DeepSeek-Coder) for Programming Question Generation and Summarization
 
-## 🎯 Project Goal
+##  Project Goal
 This project evaluates the performance of two powerful language models—T5 and DeepSeek-Coder—on Stack Overflow questions. The main objective is to assess the models' ability to summarize questions, generate answers, and compare them against actual data using ROUGE and correlation with user scores.
 
 ---
 
-## 🛠 Workflow
+##  Workflow
 
 ### 1. Data Preparation
 - Raw data was loaded from `QueryResults.csv`, including question title, body, accepted answer, tags, and user score.
@@ -51,7 +51,7 @@ score = rouge.get_scores(predicted, actual)[0]['rouge-1']['f']
 
 ---
 
-## 📊 Statistical Analysis
+##  Statistical Analysis
 - ROUGE scores between generated summaries/answers and actual data were computed.
 - Pearson correlation was calculated between ROUGE scores and user-assigned Stack Overflow scores.
 - T5 showed weak positive correlation for summarization (~0.11).
@@ -60,24 +60,12 @@ score = rouge.get_scores(predicted, actual)[0]['rouge-1']['f']
 
 ---
 
-## 📌 Conclusion
+##  Conclusion
 - Language models can generate relevant summaries and responses.
 - ROUGE alone is not sufficient to assess human-like quality.
 - Future improvements should involve semantic metrics and human evaluation.
 
 ---
 
-## 📁 Suggested Project Structure
 
-```
-📁 title-quality-project/
-│
-├── README.md
-├── data/
-│   └── QueryResults.csv
-├── notebooks/
-│   ├── t5_summarization_eval.ipynb
-│   └── deepseek_generation_eval.ipynb
-├── outputs/
-│   └── rouge_scores.csv
 ```
